@@ -1,0 +1,222 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "AdvanceOrder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_zipCode",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_products",
+						"type": "uint256[]"
+					}
+				],
+				"name": "CreateOrder",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "GetOrder",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "customer",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "ZipCode",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "products",
+								"type": "uint256[]"
+							},
+							{
+								"internalType": "enum StructEnum.Status",
+								"name": "status",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct StructEnum.Order",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_zip",
+						"type": "string"
+					}
+				],
+				"name": "UpdateZip",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "orders",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "customer",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "ZipCode",
+						"type": "string"
+					},
+					{
+						"internalType": "enum StructEnum.Status",
+						"name": "status",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"AdvanceOrder(uint256)": {
+					"details": "Function to advance the status of an order",
+					"params": {
+						"_orderId": "ID of the order to be advanced"
+					}
+				},
+				"CreateOrder(string,uint256[])": {
+					"details": "Function to create a new order",
+					"params": {
+						"_products": "List of product IDs in the order",
+						"_zipCode": "Delivery zip code for the order"
+					},
+					"returns": {
+						"_0": "Returns the ID of the created order"
+					}
+				},
+				"GetOrder(uint256)": {
+					"details": "Function to fetch the details of a specific order",
+					"params": {
+						"_orderId": "ID of the order to fetch"
+					},
+					"returns": {
+						"_0": "The Order struct for the specified order"
+					}
+				},
+				"UpdateZip(uint256,string)": {
+					"details": "Function to update the zip code of an existing order",
+					"params": {
+						"_orderId": "ID of the order to update",
+						"_zip": "New zip code for the order"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/StructEnum.sol": "StructEnum"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/StructEnum.sol": {
+			"keccak256": "0xccdf5aac6ad62d315de5f4283574a2d67d01edf2e58e67670c47ea288917b040",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://14d0015aef8b2d53d52de5a68c92b3661fadfb247744585b9a505f12eecec013",
+				"dweb:/ipfs/QmeycB58CCacv3EiDX2pVdeCkSXgFNWw336EbTtjVhnSF2"
+			]
+		}
+	},
+	"version": 1
+}
